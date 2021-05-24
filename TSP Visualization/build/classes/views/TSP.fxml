@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #289abe;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TSPController">
+    <children>
+        <SplitPane dividerPositions="0.5" layoutX="50.0" layoutY="100.0" prefHeight="400.0" prefWidth="800.0">
+            <items>
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="59.0" prefWidth="469.0" style="-fx-background-color: #128b34;" text="Meilleur Solution" textFill="WHITE">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="37.0" />
+                            </font>
+                        </Label>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="339.0" prefWidth="395.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                                    <Pane fx:id="pane2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="395.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="30.0" prefWidth="160.0">
+                           <children>
+                              <HBox prefHeight="31.0" prefWidth="393.0">
+                                 <children>
+                                    <Label prefHeight="31.0" prefWidth="150.0" text="Meilleur coût:" textFill="#0d0d0d">
+                                       <font>
+                                          <Font name="System Bold" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mcout" prefHeight="31.0" prefWidth="100.0" textFill="#128b34">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                    </children>
+                </VBox>
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="400.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="59.0" prefWidth="400.0" style="-fx-background-color: black;" text="Résolution" textFill="WHITE">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="37.0" />
+                            </font>
+                        </Label>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="337.0" prefWidth="396.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                                    <Pane fx:id="pane1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="395.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="30.0" prefWidth="160.0">
+                           <children>
+                              <HBox maxHeight="-Infinity" prefHeight="31.0" prefWidth="395.0">
+                                 <children>
+                                    <Label prefHeight="31.0" prefWidth="127.0" text="Coût total :">
+                                       <font>
+                                          <Font name="System Bold" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="coutTot" prefHeight="31.0" prefWidth="93.0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+        <MenuBar layoutX="-1.0" layoutY="1.0" prefHeight="26.0" prefWidth="660.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Aide?">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="Description" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="37.0" prefHeight="54.0" prefWidth="474.0" text="Les Petits Débrouillards" textAlignment="CENTER" textFill="#e4bf57">
+            <font>
+                <Font name="Comic Sans MS Bold" size="33.0" />
+            </font>
+        </Label>
+      <HBox layoutX="350.0" layoutY="510.0" prefHeight="47.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button fx:id="stop" disable="true" mnemonicParsing="false" onAction="#stopTSP">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/stop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="start" mnemonicParsing="false" onAction="#startTSP">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/start.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="restart" disable="true" mnemonicParsing="false" onAction="#restartTSP" prefHeight="41.0" prefWidth="48.0">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/restart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="pause" disable="true" mnemonicParsing="false" onAction="#pauseTSP" prefHeight="37.0" prefWidth="43.0">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fx:id="back" fitHeight="66.0" fitWidth="56.0" layoutX="83.0" layoutY="510.0" onMouseClicked="#goTOParametres" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/return.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="home" fitHeight="54.0" fitWidth="50.0" layoutX="24.0" layoutY="513.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/home.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="693.0" layoutY="515.0" prefHeight="27.0" prefWidth="89.0" text="Vitesse :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="vitesse" layoutX="766.0" layoutY="516.0" onAction="#changerVitesse" prefHeight="25.0" prefWidth="83.0" />
+    </children>
+</AnchorPane>
