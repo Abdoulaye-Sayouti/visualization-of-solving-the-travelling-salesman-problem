@@ -81,4 +81,3 @@ Feel free to contribute or report issues if you find any!
 ![App Screenshot](imgs/screenshot4.png)
 ![App Screenshot](imgs/screenshot5.png)
 ![App Screenshot](imgs/screenshot6.png)
-![App Screenshot](imgs/gif.gif)
