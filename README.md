@@ -1,5 +1,5 @@
 # TSP Visualization App
-
+![App Screenshot](imgs/tsp_desc.GIF)
 ## Introduction
 The TSP Visualization App is a JavaFX desktop application designed to help children understand the Traveling Salesman Problem (TSP) through interactive visualization. This app developpement is  dedicated to science education for young audiences.
 
